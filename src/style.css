@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  background-image: url('/images/map.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100vw auto;
+  min-height: 100vh;
+}
+
+
+.carousel__prev, .carousel__next {
+  box-sizing: border-box !important;
+  background: var(--vc-nav-background);
+  border-radius: var(--vc-nav-border-radius);
+  width: var(--vc-nav-width);
+  height: var(--vc-nav-height);
+  text-align: center;
+  font-size: var(--vc-nav-height);
+  padding: 0;
+  color: var(--vc-nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 0;
+  cursor: pointer;
+  margin: 0 10px;
+  top: -30px !important;
+  
+}
+.carousel__prev {
+  left: 350px !important;
+}
+
+@media (max-width: 1024px) {
+  #app {
+    height: 100vh; /* Set height to 100vh for mobile devices */
+    background-size: auto 100vh ;
+  }
+  .carousel__prev {
+    left: 250px !important;
+  }
+}
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f6f6f6;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #e3e2e2;
+}
+.overlay {
+  display: initial;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.vc-blue {
+  background-color: black;
+  border-radius: 50%;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  /* Style the background color */
+  background-color: black; /* Change this to the color you want */
+}
